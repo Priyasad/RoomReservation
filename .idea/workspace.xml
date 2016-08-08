@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aa446eff-9550-4732-82c1-937f7907b199" name="Default" comment="ant_started">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/RoomReservation_war_exploded/Home.html" afterPath="$PROJECT_DIR$/out/artifacts/RoomReservation_war_exploded/Home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/RoomReservation_war_exploded/STYLES/homeStyles.css" afterPath="$PROJECT_DIR$/out/artifacts/RoomReservation_war_exploded/STYLES/homeStyles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Home.html" afterPath="$PROJECT_DIR$/web/Home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/STYLES/homeStyles.css" afterPath="$PROJECT_DIR$/web/STYLES/homeStyles.css" />
     </list>
     <ignored path="RoomReservation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -138,8 +135,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="118" />
-    <option name="y" value="226" />
+    <option name="x" value="125" />
+    <option name="y" value="24" />
     <option name="width" value="1291" />
     <option name="height" value="716" />
   </component>
@@ -983,7 +980,7 @@
       <workItem from="1470366862412" duration="4789000" />
       <workItem from="1470387934155" duration="1150000" />
       <workItem from="1470390486990" duration="3384000" />
-      <workItem from="1470629353487" duration="13014000" />
+      <workItem from="1470629353487" duration="13053000" />
     </task>
     <task id="LOCAL-00001" summary="Servlet Test">
       <created>1470391275266</created>
@@ -1006,14 +1003,21 @@
       <option name="project" value="LOCAL" />
       <updated>1470647702079</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ant_started">
+      <created>1470653520641</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1470653520641</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29244000" />
+    <option name="totallyTimeSpent" value="29283000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="118" y="226" width="1291" height="716" extended-state="0" />
+    <frame x="125" y="24" width="1291" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
