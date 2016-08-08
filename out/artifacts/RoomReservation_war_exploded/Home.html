@@ -26,8 +26,28 @@
                         <a class="navbar-brand" href="#">Room Reservation</a>
                     </div>
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Travel Destinations</a></li>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Travel Destinations
+                                <span class="caret">
+
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Russia</a></li>
+                                <li><a href="#">China</a></li>
+                                <li><a href="#">America</a></li>
+                                <li><a href="#">Germany</a></li>
+                                <li><a href="#">Australia</a></li>
+
+                            </ul>
+                        </li>
                         <li><a href="#">Hotel Reservations</a></li>
                         <li><a href="#">Our Team</a></li>
                         <li><a href="#">Contact Us</a></li>
@@ -58,6 +78,9 @@
 
     <div id = "middleBar">
         <div id="middleBarChild">
+
+
+
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -69,36 +92,20 @@
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <img src="IMAGES/China-19.jpg" alt="Chania">
-                        <div class="carousel-caption">
-                            <h3>Chania</h3>
-                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                        </div>
+                    <div class="item">
+                        <img src="IMAGES/china-eu-800x400.png" alt="Chania">
                     </div>
 
                     <div class="item">
-                        <img src="IMAGES/635073_1.jpg" alt="Chania">
-                        <div class="carousel-caption">
-                            <h3>Chania</h3>
-                            <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                        </div>
+                        <img src="IMAGES/año-nuevo-chino1-623x408.jpg" alt="Chania">
                     </div>
 
                     <div class="item">
-                        <img src="IMAGES/año-nuevo-chino1-623x408.jpg" alt="Flower">
-                        <div class="carousel-caption">
-                            <h3>Flowers</h3>
-                            <p>Beatiful flowers in Kolymbari, Crete.</p>
-                        </div>
+                        <img src="IMAGES/China-19.jpg" alt="Flower">
                     </div>
 
                     <div class="item">
-                        <img src="img_flower2.jpg" alt="Flower">
-                        <div class="carousel-caption">
-                            <h3>Flowers</h3>
-                            <p>Beatiful flowers in Kolymbari, Crete.</p>
-                        </div>
+                        <img src="IMAGES/635073_1.jpg" alt="Flower">
                     </div>
                 </div>
 
@@ -123,11 +130,11 @@
             <form role="form">
                 <div class="form-group">
                     <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email">
+                    <input type="email" class="form-control" id="email" style="width: 50px">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd">
+                    <input type="password" class="form-control" id="pwd" style="width: 50px">
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox"> Remember me</label>

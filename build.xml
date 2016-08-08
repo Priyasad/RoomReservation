@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project name="RoomReservation" default="generate-javadoc" basedir=".">
+<?xml version="1.0"?>
+<project name="Room Reservation" basedir="." default="usage">
     <property name="src.dir" value="src"/>
     <property name="web.dir" value="war"/>
+    <property name="javadoc.dir" value="doc"/>
+    <property name="deploy.path" value="deploy"/>
+    <property name="appserver.lib" value="${web.dir}/WEB-INF/lib"/>
     <property name="build.dir" value="${web.dir}/WEB-INF/classes"/>
     <property name="name" value="fax"/>
-
     <path id="master-classpath">
         <fileset dir="${web.dir}/WEB-INF/lib">
             <include name="*.jar"/>
@@ -12,15 +14,72 @@
         <pathelement path="${build.dir}"/>
     </path>
 
-    <target name="build" description="Compile Source Tree Java Files" depends=" clean">
+    <target name="javadoc">
+        <javadoc packagenames="internApp.*" sourcepath="${src.dir}"
+                 destdir="doc" version="true" windowtitle="Room Reservation">
+            <doctitle><![CDATA[<h1>= Fax Application
+          =</h1>]]></doctitle>
+            <bottom><![CDATA[Copyright © 2011. All
+          Rights Reserved.]]></bottom>
+            <group title="util packages" packages="faxapp.util.*"/>
+            <group title="web packages" packages="faxapp.web.*"/>
+            <group title="data packages"
+                   packages="faxapp.entity.*:faxapp.dao.*"/>
+        </javadoc>
+    </target>
+
+    <target name="usage">
+        <echo message=""/>
+        <echo message="${name} build file"/>
+        <echo message="-----------------------------------"/>
+        <echo message=""/>
+        <echo message="Available targets are:"/>
+        <echo message=""/>
+        <echo message="deploy    --> Deploy application
+          as directory"/>
+        <echo message="deploywar --> Deploy application
+          as a WAR file"/>
+        <echo message=""/>
+    </target>
+
+    <target name="build" description="Compile main
+      source tree java files">
         <mkdir dir="${build.dir}"/>
-        <javac destdir="${build.dir}" source="1.7" target="1.7">
+        <javac destdir="${build.dir}" source="1.5"
+               target="1.5" debug="true"
+               deprecation="false" optimize="false" failonerror="true">
             <src path="${src.dir}"/>
             <classpath refid="master-classpath"/>
         </javac>
     </target>
 
-    <target name="clean" description="Clean Output Directories">
+    <target name="deploy" depends="build"
+            description="Deploy application">
+        <copy todir="${deploy.path}/${name}"
+              preservelastmodified="true">
+            <fileset dir="${web.dir}">
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="deploywar" depends="build"
+            description="Deploy application as a WAR file">
+        <war destfile="${name}.war"
+             webxml="${web.dir}/WEB-INF/web.xml">
+            <fileset dir="${web.dir}">
+                <include name="**/*.*"/>
+            </fileset>
+        </war>
+        <copy todir="${deploy.path}" preservelastmodified="true">
+            <fileset dir=".">
+                <include name="*.war"/>
+            </fileset>
+        </copy>
+    </target>
+
+
+    <target name="clean" description="Clean output directories">
         <delete>
             <fileset dir="${build.dir}">
                 <include name="**/*.class"/>
@@ -28,47 +87,46 @@
         </delete>
     </target>
 
-    <target name="generate-javadoc" depends="build">
-        <javadoc packagenames="RoomReservation.*" sourcepath="${src.dir}" destdir="doc" version="true" windowtitle="Room Reservation">
-            <doctitle>
-                <![CDATA[Copyright © 2016. All Rights Reserved.]]>
-            </doctitle>
-            <bottom>
-                <![CDATA[Copyright © 2016. All Rights Reserved.]]>
-            </bottom>
-            <group title="util packages" packages="RoomReservation.util.*"/>
-            <group title="web packages" packages="RoomReservation.web.*"/>
-            <group title="data packages" packages="RoomReservation.entity.*:RoomReservation.dao.*"/>
-        </javadoc>
-    </target>
-    <echo message="java doc has been generated!" />
+
+    <!-- ============================================================ -->
+    <!-- Tomcat tasks -->
+    <!-- ============================================================ -->
 
     <path id="catalina-ant-classpath">
         <!-- We need the Catalina jars for Tomcat -->
         <!--  * for other app servers - check the docs -->
-        <fileset dir="${web.dir}/WEB-INF/lib">
+        <fileset dir="${appserver.lib}">
             <include name="catalina-ant.jar"/>
         </fileset>
     </path>
 
+    <taskdef name="install"
+             classname="org.apache.catalina.ant.DeployTask">
+        <classpath refid="catalina-ant-classpath"/>
+    </taskdef>
+    <taskdef name="reload"
+             classname="org.apache.catalina.ant.ReloadTask">
+        <classpath refid="catalina-ant-classpath"/>
+    </taskdef>
+    <taskdef name="list"
+             classname="org.apache.catalina.ant.ListTask">
+        <classpath refid="catalina-ant-classpath"/>
+    </taskdef>
+    <taskdef name="start"
+             classname="org.apache.catalina.ant.StartTask">
+        <classpath refid="catalina-ant-classpath"/>
+    </taskdef>
+    <taskdef name="stop"
+             classname="org.apache.catalina.ant.StopTask">
+        <classpath refid="catalina-ant-classpath"/>
+    </taskdef>
 
-    <taskdef name="reload" classname="org.apache.catalina.ant.ReloadTask">
-        <classpath refid="catalina-ant-classpath"/>
-    </taskdef>
-    <taskdef name="list" classname="org.apache.catalina.ant.ListTask">
-        <classpath refid="catalina-ant-classpath"/>
-    </taskdef>
-    <taskdef name="start" classname="org.apache.catalina.ant.StartTask">
-        <classpath refid="catalina-ant-classpath"/>
-    </taskdef>
-    <taskdef name="stop" classname="org.apache.catalina.ant.StopTask">
-        <classpath refid="catalina-ant-classpath"/>
-    </taskdef>
-
+    <!--
     <target name="reload" description="Reload application in Tomcat">
-        <reload url="web/home.html" username=""
-                password="" path="/${name}"/>
+        <reload url="${tomcat.manager.url}"
+                username="${tomcat.manager.username}"
+                password="${tomcat.manager.password}"
+                path="/${name}"/>
     </target>
-
+    -->
 </project>
-

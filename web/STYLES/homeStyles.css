@@ -32,31 +32,33 @@
 }
 
 #rightBar{
-    width: 20vw;
+    width: 30vw;
     height: 85vh;
     background-color: #23ff31;
     position: absolute;
     top:150px;
     float: right;
-    left: 80vw;
+    left: 75vw;
     overflow: hidden;
 }
 
 #rightBarChild{
     position: relative;
-    width: 100%;
+    width: 74%;
     height: 100%;
     overflow-y: scroll;
     margin-left: 17px;
+    align-items: center;
+    align-content: center;
 }
 
 #middleBar{
-    width: 60vw;
+    width: 55vw;
     height: 85vh;
     left: 200px;
     top: 150px;
     position: absolute;
-    background-color: #3e3eff;
+    background-color: white;
     left: 20vw;
     overflow: hidden;
 }
@@ -92,7 +94,8 @@
     position: absolute;
 }
 
-.bgimg {
-
+.myCarousel-inner img {
+    width: 100%;
+    height: 100%;
 }
 
