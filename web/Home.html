@@ -8,7 +8,7 @@
     <script src="JS/npm.js"></script>
 
     <title>
-        Room Reservation
+        Travel Guide
     </title>
 
 </head>
@@ -23,7 +23,7 @@
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">Room Reservation</a>
+                        <a class="navbar-brand" href="#">Travel Guide</a>
                     </div>
                     <ul class="nav navbar-nav">
                         <li>
@@ -64,18 +64,26 @@
 
     <div id = "leftBar">
         <div id="leftBarChild">
+
+
             <div class="leftInnerChild" style="top: 10px ; position: absolute">
-                <img class="img-responsive" src="IMAGES/add1.jpg" alt="Chania" style="width: 100%; height: 300px">
+                <a href="http://www.visitaustralia.com/" target="_blank">
+                    <img class="img-responsive" src="IMAGES/add1.jpg" alt="Chania" style="width: 100%; height: 300px" >
+                </a>
             </div>
 
             <div class="leftInnerChild" style="top: 325px ; position: absolute">
-                <img class="img-responsive" src="IMAGES/add2.jpg" alt="Chania" style="width: 100%; height: 300px">
+                <a href="http://www.visitarizona.com/" target="_blank">
+                    <img class="img-responsive" src="IMAGES/add2.jpg" alt="Chania" style="width: 100%; height: 300px" >
+                </a>
+
             </div>
 
             <div class="leftInnerChild" style="top: 645px; position: absolute">
-                <img class="img-responsive" src="IMAGES/add3.jpg" alt="Chania" style="width: 100%; height: 300px">
+                <a href="http://www.visitgreece.gr/" target="_blank">
+                    <img class="img-responsive" src="IMAGES/add3.jpg" alt="Chania" style="width: 100%; height: 300px" >
+                </a>
             </div>
-
         </div>
     </div>
 
@@ -85,6 +93,8 @@
 
             <!--<img src="IMAGES/add2.jpg" class="img-circle" alt="Cinque Terre" width="304px" height="236px" style="height: auto;width: auto ; max-width: 300px; max-height: 400px" />
 -->
+            <object type="text/html" data="ContactUS.html" width="95%" height="100%" style="overflow:auto;border:5px ridge blue">
+            </object>
 
         </div>
     </div>
@@ -92,20 +102,12 @@
     <div id="rightBar">
         <div id = "rightBarChild">
 
-            <form role="form" style="position: relative; top: 50px">
-                <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email" style="width: 350px">
-                </div>
-                <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input type="password" class="form-control" id="pwd" style="width: 350px">
-                </div>
-                <div class="checkbox">
-                    <label><input type="checkbox"> Remember me</label>
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+            <div class="video">
+                <video width=100%  preload="auto" autoplay loop muted="muted" volume="10" height="100%">
+                    <source src="VIDEO/play.mp4" type="video/mp4">
+                </video>
+            </div>
+
 
 
         </div>

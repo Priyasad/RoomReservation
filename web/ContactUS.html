@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Contact US</title>
+    <link rel="stylesheet" href="STYLES/bootstrap.min.css" />
+    <script src="JS/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBxgl7ZfBBXtDaIvgtjP9yXJma7_vNCqVs"></script>
+
+    <script>
+        function initialize() {
+            var mapProp = {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:5,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+    <h1 id="headers">
+        Contact Our Support Team
+    </h1>
+
+</head>
+
+<body>
+
+
+            <div id="googleMap" style="width:500px;height:380px; top: 90px ; position:absolute; left: 85px"></div>
+
+            <div id="leftCorner" style="top: 480px; left: 30px; position: absolute">
+                <p style="color: blue">
+                    <br>
+                    <br>
+                    Darshana Priyasad<br>
+                    No 207/1,<br>
+                    Batuwita,<br>
+                    Gonapola Junction.<br>
+                    Sri Lanka.<br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </p>
+
+            </div>
+
+            <div style="top: 480px; left: 150px; position: absolute" >
+                <div class="col-xs-8 pull-right text-right" id="menu">
+                    <ul>
+                        <li><a href="http://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+                        <li><a href="https://twitter.com/?lang=en" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter  </a> </li>
+                        <li><a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i> FaceBook</a> </li>
+                        <li><a href="https://plus.google.com" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i> Google+</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+</body>
+</html>

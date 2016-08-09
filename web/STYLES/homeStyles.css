@@ -18,7 +18,6 @@
     background-color: white;
     position: absolute;
     top:150px;
-    float: left;
     overflow: hidden;
     left: 0px;
 }
@@ -36,7 +35,7 @@
 #rightBar{
     width: 30vw;
     height: 85vh;
-    background-color: #23ff31;
+    background-color: white;
     position: absolute;
     top:150px;
     float: right;
@@ -85,6 +84,7 @@
 
 .leftMenuBarItem{
     width: 17vw;
+    left: 0px;
 }
 
 #navBarDiv{
@@ -101,6 +101,13 @@
 
 .leftInnerChild{
     height: 300px ;
-    width:100%;
+    width:90%;
     left: 0px;
+}
+
+.video{
+    width:100%;
+    height:300px;
+    top: 5px;
+    position: relative;
 }
