@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa446eff-9550-4732-82c1-937f7907b199" name="Default" comment="new">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ContactUS.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/STYLES/contactStyles.css" />
+    <list default="true" id="aa446eff-9550-4732-82c1-937f7907b199" name="Default" comment="ContactUS">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/RoomReservation_war_exploded/Home.html" afterPath="$PROJECT_DIR$/out/artifacts/RoomReservation_war_exploded/Home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/RoomReservation_war_exploded/STYLES/homeStyles.css" afterPath="$PROJECT_DIR$/out/artifacts/RoomReservation_war_exploded/STYLES/homeStyles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Home.html" afterPath="$PROJECT_DIR$/web/Home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/STYLES/homeStyles.css" afterPath="$PROJECT_DIR$/web/STYLES/homeStyles.css" />
     </list>
     <ignored path="RoomReservation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1105,7 +1101,7 @@
       <workItem from="1470390486990" duration="3384000" />
       <workItem from="1470629353487" duration="13077000" />
       <workItem from="1470713908785" duration="744000" />
-      <workItem from="1470715570214" duration="11953000" />
+      <workItem from="1470715570214" duration="11998000" />
     </task>
     <task id="LOCAL-00001" summary="Servlet Test">
       <created>1470391275266</created>
@@ -1149,11 +1145,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470733201877</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ContactUS">
+      <created>1470744081398</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1470744081430</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42004000" />
+    <option name="totallyTimeSpent" value="42049000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -1210,7 +1213,8 @@
     <MESSAGE value="bootstrap_started" />
     <MESSAGE value="ant_started" />
     <MESSAGE value="new" />
-    <option name="LAST_COMMIT_MESSAGE" value="new" />
+    <MESSAGE value="ContactUS" />
+    <option name="LAST_COMMIT_MESSAGE" value="ContactUS" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
